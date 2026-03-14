@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-16 12:00 - Project Data Organization & Schema Validation
+- **Problem**: Define the optimal location for the primary framework data and test instances to ensure compliance with `GEMINI.md` and support AI observability.
+- **Solution 1: Framework definition in `/src/schema`**
+  - Reasoning: Keeps the schema and its primary instance together, but violates the directory purpose defined in `GEMINI.md`.
+- **Solution 2: Hierarchical hybrid structure**
+  - Reasoning: Organizes data into subdirectories by framework or version. While scalable for very large projects, it adds unnecessary complexity for the current fusion framework goals.
+- **Solution 3 (Chosen): Separation of Schema and Data**
+  - Reasoning: Strictly adheres to the `GEMINI.md` mandate where `/src/schema` contains the schema and `/src/data` contains instances. This improves observability by clearly separating the "rules" (schema) from the "content" (data) and facilitates easier testing of multiple data instances.
+
 ## 2026-03-16 10:00 - Unified Process & Deliverables Architecture
 - **Problem**: Define unified deliverables and process steps for the Fusion framework that balance AI observability with the human "Handler" role model.
 - **Solution 1: Phase-based Model (Classic Lifecycle)**

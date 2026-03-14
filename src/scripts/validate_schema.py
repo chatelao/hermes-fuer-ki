@@ -41,9 +41,19 @@ def validate_schema(yaml_path, schema_path):
 
 if __name__ == "__main__":
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    yaml_file = os.path.join(base_dir, "src", "schema", "framework.yaml")
     schema_file = os.path.join(base_dir, "src", "schema", "framework.schema.json")
 
-    success = validate_schema(yaml_file, schema_file)
-    if not success:
+    if len(sys.argv) > 1:
+        yaml_files = sys.argv[1:]
+    else:
+        # Default to all yaml files in src/data if no arguments provided
+        data_dir = os.path.join(base_dir, "src", "data")
+        yaml_files = [os.path.join(data_dir, f) for f in os.listdir(data_dir) if f.endswith(('.yaml', '.yml'))]
+
+    overall_success = True
+    for yaml_file in yaml_files:
+        if not validate_schema(yaml_file, schema_file):
+            overall_success = False
+
+    if not overall_success:
         sys.exit(1)
