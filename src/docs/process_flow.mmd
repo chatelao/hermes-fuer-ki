@@ -1,0 +1,13 @@
+```mermaid
+graph TD
+    step_starting_decision["The Starting Decision<br/>(Authorization to Invest)"]
+    step_alignment_decision["The Alignment Decision<br/>(Commitment to Scope & Priorities)"]
+    step_execution_loop["The Execution Loop<br/>(Continuous Go/No-Go)"]
+    step_intervention_decision["The Intervention Decision<br/>(Course Correction or Pivot)"]
+    step_realization_decision["The Realization Decision<br/>(Authorization of Closure)"]
+    step_starting_decision --> step_alignment_decision
+    step_alignment_decision --> step_execution_loop
+    step_execution_loop --> step_intervention_decision
+    step_intervention_decision --> step_realization_decision
+    step_execution_loop --> step_execution_loop
+```
