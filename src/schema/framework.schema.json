@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fusion Framework Schema",
+  "description": "Schema for the unified Fusion Skill & RACI framework incorporating RUP, V-Modell-XT, Hermes, Scrum, and PRINCE2.",
+  "type": "object",
+  "properties": {
+    "framework_metadata": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "required": ["name", "version"]
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": ["Strategic", "Governance", "Tactical", "Operational", "Technical"]
+          },
+          "accountability": { "type": "string" },
+          "human_interaction": { "type": "string" },
+          "mapping": {
+            "type": "object",
+            "properties": {
+              "Scrum": { "type": "string" },
+              "PRINCE2": { "type": "string" },
+              "Hermes": { "type": "string" },
+              "RUP": { "type": "string" },
+              "V-Modell-XT": { "type": "string" }
+            }
+          }
+        },
+        "required": ["id", "name", "category", "accountability"]
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "accountability": { "type": "string" },
+          "mapping": { "type": "string" }
+        },
+        "required": ["id", "name", "accountability"]
+      }
+    },
+    "process_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "primary_roles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "objective": { "type": "string" },
+          "activities": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "decision_point": { "type": "string" }
+        },
+        "required": ["id", "name", "primary_roles", "objective"]
+      }
+    }
+  },
+  "required": ["framework_metadata", "roles", "deliverables", "process_steps"]
+}

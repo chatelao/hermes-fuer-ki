@@ -1,0 +1,33 @@
+framework_metadata:
+  name: "Fusion Skill & RACI Framework"
+  version: "1.0.0"
+  description: "A unified project management framework."
+
+roles:
+  - id: "handler-start"
+    name: "Handler of the Start"
+    category: "Strategic"
+    accountability: "Initializing the project and defining success."
+    human_interaction: "Strategic decisions."
+    mapping:
+      Scrum: "Product Owner"
+      PRINCE2: "Executive"
+
+  - id: "handler-conflicts"
+    name: "Handler of Conflicts"
+    category: "Governance"
+    accountability: "Resolving priority clashes."
+    human_interaction: "Value-based prioritization."
+
+deliverables:
+  - id: "project-vision"
+    name: "Project Vision & Business Case"
+    description: "Defines strategic goal."
+    accountability: "Handler of the Start"
+
+process_steps:
+  - id: "starting-decision"
+    name: "The Starting Decision"
+    primary_roles: ["Handler of the Start"]
+    objective: "Establish the 'Why' and 'Whether'."
+    decision_point: "Authorization to Invest"

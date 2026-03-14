@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-17 09:00 - Unified Framework Schema Architecture
+- **Problem**: Define the structure of the JSON Schema to represent the unified framework (roles, deliverables, process).
+- **Solution 1 (Chosen): Single Monolithic Schema**
+  - Reasoning: Simple to validate everything at once and ensures referential integrity easily across roles, deliverables, and process steps.
+- **Solution 2: Split Schemas (Modular)**
+  - Reasoning: Provides better modularity for individual components but increases complexity in managing cross-references and unified validation.
+- **Solution 3: Multi-level Schema with External Definitions**
+  - Reasoning: Offers high reuse through references but is more complex to manage and may hinder "ease of interaction" for human handlers.
+
 ## 2026-03-16 10:00 - Unified Process & Deliverables Architecture
 - **Problem**: Define unified deliverables and process steps for the Fusion framework that balance AI observability with the human "Handler" role model.
 - **Solution 1: Phase-based Model (Classic Lifecycle)**
