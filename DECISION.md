@@ -14,6 +14,21 @@
 - **Decision (Chosen): Solution 1: Direct Accountability Mapping (The "Handler" Core)**
   - Reasoning: This solution most strictly adheres to the GEMINI.md mandate for human roles while providing the highest observability for AI. By naming the roles after their primary human interaction pattern, it simplifies the "Ease of Interaction" goal.
 
+## 2026-03-15 14:00 - Unified Process and Deliverable Structure
+- **Problem**: Define unified process steps and deliverables for the fusion framework that align with the Handler Core roles and maximize AI observability.
+- **Solution 1: Accountability-Based Stream (Chosen)**
+  - Process: Initializing (Start), Governing (Conflicts), Adapting (Exceptions), Orchestrating (AI), Executing (Delivery).
+  - Deliverables: Success Definition, Alignment Log, Exception Resolution, Process Trace, Implementation Artifacts.
+  - Reasoning: Directly mirrors the Handler roles, ensuring clear human accountability at critical points while providing a structured trace for AI orchestration.
+- **Solution 2: Phase-Gate Lifecycle (Modernized V-Modell/Hermes)**
+  - Process: Initialisierung, Konzept, Realisierung, Einführung, Abschluss.
+  - Deliverables: Project Brief, Architecture, Test Protocol, Release Note, Closure Report.
+  - Reasoning: Leverages familiar terminology from Hermes and V-Modell, but might be too rigid for AI-driven operational orchestration.
+- **Solution 3: Value-Loop Orchestration (SCRUM/Agile Fusion)**
+  - Process: Visioning, Prioritizing, Sprinting, Adapting.
+  - Deliverables: Backlog, Increment, Retrospective, Burn-up/down.
+  - Reasoning: High flexibility but lacks the explicit "Handler" checkpoints required for strategic and conflict governance in larger enterprise contexts.
+
 ## 2025-05-15 14:30 - Specification Conversion Strategy
 - **Problem**: Convert downloaded specifications (HTML and PDF) to Markdown for readability and AI consumption, as required by GEMINI.md.
 - **Solution 1**: Use `lynx -dump` for HTML and `strings` for PDF.

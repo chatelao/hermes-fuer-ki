@@ -1,7 +1,7 @@
 # ROADMAP
 
 ## Planned
-- [ ] Define unified deliverables and process steps.
+- [x] 2026-03-15: Defined unified deliverables and process steps in `/design/unified_process_deliverables.md`.
 - [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
 - [ ] Create initial test data in `/src/data` to verify schema and role definitions.
 
