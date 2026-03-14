@@ -1,8 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Extract all roles from each of the original models into OLD_ROLES_<model>.md
-- [ ] Create an unified overview of all, if possible matching, roles in OLD_ROLES_OVERVIEW.md
 - [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
 - [ ] Create initial test data in `/src/data` to verify schema and role definitions.
 - [ ] Develop scripts in `/src/scripts` to verify the data and generate deliverables.
@@ -12,6 +10,8 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Created unified overview of matching roles in `specifications/OLD_ROLES_OVERVIEW.md`.
+- [x] 2026-03-16: Extracted all roles from original models into `specifications/OLD_ROLES_<model>.md`.
 - [x] 2026-03-16: Defined unified deliverables and process steps in `design/unified_process_deliverables.md`.
 - [x] 2026-03-15: Defined unified roles and drafted initial design documentation in `/design/unified_roles.md`.
 - [x] 2026-03-15: Researched and selected YAML/JSON Schema for AI observability and human interaction.
