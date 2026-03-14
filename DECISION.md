@@ -11,3 +11,10 @@
 - **Problem**: Initialize the project according to GEMINI.md.
 - **Solution 1 (Chosen)**: Manual creation of the directory structure and initial markdown files based on the project structure section in GEMINI.md.
 - **Reasoning**: This ensures full compliance with the specified layout from the start.
+
+## 2024-03-14 12:25 - Framework Specification Acquisition
+- **Problem**: Obtain authentic specifications for RUP, V-Modell-XT, Hermes, SCRUM, and PRINCE2.
+- **Solution 1**: Direct download from official websites.
+- **Solution 2**: Retrieval from the Internet Archive (Wayback Machine).
+- **Solution 3 (Chosen)**: Use a hybrid approach of official downloads and comprehensive educational/reference summaries (e.g., Wikipedia) when direct official PDFs are unavailable or restricted by access controls.
+- **Reasoning**: While official PDFs are preferred, many are behind paywalls or restricted by automated access controls. High-quality summaries ensure the project has the necessary conceptual information to build the fusion framework.
