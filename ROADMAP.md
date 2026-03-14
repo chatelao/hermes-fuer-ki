@@ -7,7 +7,7 @@
 - [ ] Implement initial schema in `/src/schema`.
 
 ## Proposed
-
+, 
 ## Finished
 - [x] 2026-03-15: Verified comprehensive original specifications and confirmed current Markdown baseline.
 - [x] 2026-03-14: Check /specification recursive for new files, mark them ".original." and convert them to Markdown.
