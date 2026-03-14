@@ -1,5 +1,19 @@
 # DECISION Log
 
+## 2026-03-15 13:00 - Unified Role System Architecture
+- **Problem**: Define a unified role system that fuses RUP, V-Modell-XT, Hermes, SCRUM, and PRINCE2, emphasizing AI observability and human ease of interaction (Handlers of Start, Conflicts, and Exceptions).
+- **Solution 1: Direct Accountability Mapping (The "Handler" Core)**
+  - Roles: **Handler of the Start** (Strategic), **Handler of Conflicts** (Governance), **Handler of Exceptions** (Tactical), **AI Orchestrator** (Operational), **Delivery Specialist** (Technical).
+  - Reasoning: Provides a clean, minimalist structure that directly implements the human-centric mandates while delegating operational complexity to AI.
+- **Solution 2: Agile-Governance Hybrid (Scrum-PRINCE2 Fusion)**
+  - Roles: **Product Executive** (Handler of Start), **Governance Board** (Handler of Conflicts), **Flow Guardian** (Handler of Exceptions), **AI Assistant**, **Cross-Functional Team**.
+  - Reasoning: Leverages familiar terms from established frameworks but re-aligns them to the Handler model, potentially easier for legacy teams to adopt.
+- **Solution 3: Functional Stream Fusion (Discipline-Oriented)**
+  - Roles: **Initiator**, **Arbitrator**, **Resolver**, **AI Process Engine**, **Workstream Leads**.
+  - Reasoning: Focuses on the function performed rather than the position, allowing for more flexible scaling in complex environments.
+- **Decision (Chosen): Solution 1: Direct Accountability Mapping (The "Handler" Core)**
+  - Reasoning: This solution most strictly adheres to the GEMINI.md mandate for human roles while providing the highest observability for AI. By naming the roles after their primary human interaction pattern, it simplifies the "Ease of Interaction" goal.
+
 ## 2025-05-15 14:30 - Specification Conversion Strategy
 - **Problem**: Convert downloaded specifications (HTML and PDF) to Markdown for readability and AI consumption, as required by GEMINI.md.
 - **Solution 1**: Use `lynx -dump` for HTML and `strings` for PDF.
