@@ -1,6 +1,8 @@
 # ROADMAP
 
 ## Planned
+- [ ] Extract all roles from each of the original models into OLD_ROLES_<model>.md
+- [ ] Create an unified overview of all, if possible matching, roles in OLD_ROLES_OVERVIEW.md
 - [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
 - [ ] Create initial test data in `/src/data` to verify schema and role definitions.
 - [ ] Develop scripts in `/src/scripts` to verify the data and generate deliverables.
