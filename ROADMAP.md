@@ -1,14 +1,16 @@
 # ROADMAP
 
 ## Planned
-- [ ] Research AI-friendly schema formats (JSON-LD, etc.) for the unified system.
 - [ ] Define initial set of unified roles based on the five frameworks.
 - [ ] Define unified deliverables and process steps.
-- [ ] Implement initial schema in `/src/schema`.
+- [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
+- [ ] Draft design documentation in `/design` for the unified role system.
+- [ ] Create initial test data in `/src/data` to verify schema and role definitions.
 
 ## Proposed
-, 
+
 ## Finished
+- [x] 2026-03-15: Researched and selected YAML/JSON Schema for AI observability and human interaction.
 - [x] 2026-03-15: Verified comprehensive original specifications and confirmed current Markdown baseline.
 - [x] 2026-03-14: Check /specification recursive for new files, mark them ".original." and convert them to Markdown.
 - [x] 2025-05-15: Convert original specifications to Markdown.
