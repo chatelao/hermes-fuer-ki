@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fusion Skill & RACI Framework Schema",
+  "type": "object",
+  "properties": {
+    "framework": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "pattern": "^role_" },
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "accountability": { "type": "string" },
+              "human_interaction": { "type": "string" },
+              "mapping": {
+                "type": "object",
+                "additionalProperties": { "type": "string" }
+              }
+            },
+            "required": ["id", "name", "description", "accountability"]
+          }
+        },
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "pattern": "^del_" },
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "accountability_id": { "type": "string", "pattern": "^role_" },
+              "mapping": { "type": "string" }
+            },
+            "required": ["id", "name", "description", "accountability_id"]
+          }
+        },
+        "process_steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "pattern": "^step_" },
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "primary_role_id": { "type": "string", "pattern": "^role_" },
+              "objective": { "type": "string" },
+              "activities": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "decision_point": { "type": "string" },
+              "inputs": {
+                "type": "array",
+                "items": { "type": "string", "pattern": "^del_" }
+              },
+              "outputs": {
+                "type": "array",
+                "items": { "type": "string", "pattern": "^del_" }
+              }
+            },
+            "required": ["id", "name", "primary_role_id"]
+          }
+        }
+      },
+      "required": ["name", "version", "roles", "deliverables", "process_steps"]
+    }
+  },
+  "required": ["framework"]
+}

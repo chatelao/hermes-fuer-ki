@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
 - [ ] Create initial test data in `/src/data` to verify schema and role definitions.
 - [ ] Develop scripts in `/src/scripts` to verify the data and generate deliverables.
 - [ ] Generate documentation and images in `/src/docs` and `/src/images` from the source data.
@@ -10,6 +9,7 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Implemented initial schema in `/src/schema` using YAML and JSON Schema.
 - [x] 2026-03-16: Created unified overview of matching roles in `specifications/OLD_ROLES_OVERVIEW.md`.
 - [x] 2026-03-16: Extracted all roles from original models into `specifications/OLD_ROLES_<model>.md`.
 - [x] 2026-03-16: Defined unified deliverables and process steps in `design/unified_process_deliverables.md`.
