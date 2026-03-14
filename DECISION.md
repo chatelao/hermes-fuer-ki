@@ -33,3 +33,12 @@
 - **Findings**: Extensive searching of official domains (admin.ch, bund.de) and general repositories did not yield public, direct download links to the full reference manuals in PDF format. Most official documentation is delivered via interactive web portals or restricted-access PDFs.
 - **Decision**: Continue using the current high-quality Markdown conversions of comprehensive reference summaries. The SCRUM specification remains the full official guide.
 - **Reasoning**: The current summaries provide sufficient detail for role, deliverable, and process definition as required by the fusion framework goal, and are more accessible for AI consumption than non-public or fragmented PDF sources.
+
+## 2026-03-14 14:15 - Specification Processing Automation
+- **Problem**: Implement the roadmap step to recursively check for new files, mark them as ".original.", and convert them to Markdown.
+- **Solution 1**: Purely manual renaming and conversion using CLI tools.
+  - Reasoning: Simple but tedious and error-prone for multiple files.
+- **Solution 2 (Chosen)**: Use systematic CLI commands (find, rename, and conversion tools) to identify and process files.
+  - Reasoning: Provides a good balance between automation and control, ensuring all files are correctly handled according to the naming convention and converted efficiently.
+- **Solution 3**: Develop a custom Python script for the entire pipeline.
+  - Reasoning: Robust and reusable, but potentially overkill for the current number of files and initial setup phase.
