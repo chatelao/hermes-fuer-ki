@@ -23,6 +23,17 @@
 - **Decision (Chosen): Solution 1: Direct Accountability Mapping (The "Handler" Core)**
   - Reasoning: This solution most strictly adheres to the GEMINI.md mandate for human roles while providing the highest observability for AI. By naming the roles after their primary human interaction pattern, it simplifies the "Ease of Interaction" goal.
 
+## 2026-03-16 11:00 - Unified Framework Schema Architecture
+- **Problem**: Define a schema architecture for the unified framework that supports both AI observability and human-friendly YAML interaction.
+- **Solution 1: Modular Schema (Per-Component)**
+  - Reasoning: Splits roles, deliverables, and process steps into separate schemas. Good for isolation but complex to manage cross-component referential integrity.
+- **Solution 2: Relationship-centric Schema (Graph-based)**
+  - Reasoning: Focuses on the connections between elements. High AI observability but potentially difficult for human "handlers" to read and edit.
+- **Solution 3 (Chosen): Monolithic JSON Schema (The Unified Core)**
+  - Reasoning: Manages roles, deliverables, and process steps as a single unit in one schema. Ensures cross-component referential integrity is easily validated and provides a clear, comprehensive structure for both AI and humans.
+- **Decision (Chosen): Solution 3: Monolithic JSON Schema (The Unified Core)**
+  - Reasoning: This provides the best balance for maintaining a strictly typed system where deliverables can easily reference their accountable roles, and process steps can reference their outputs.
+
 ## 2025-05-15 14:30 - Specification Conversion Strategy
 - **Problem**: Convert downloaded specifications (HTML and PDF) to Markdown for readability and AI consumption, as required by GEMINI.md.
 - **Solution 1**: Use `lynx -dump` for HTML and `strings` for PDF.
