@@ -34,6 +34,13 @@
 - **Decision**: Continue using the current high-quality Markdown conversions of comprehensive reference summaries. The SCRUM specification remains the full official guide.
 - **Reasoning**: The current summaries provide sufficient detail for role, deliverable, and process definition as required by the fusion framework goal, and are more accessible for AI consumption than non-public or fragmented PDF sources.
 
+## 2026-03-15 11:30 - Final Comprehensive Specification Verification
+- **Problem**: Confirm if more comprehensive original specifications (PDFs) are available for the core frameworks as per ROADMAP.md.
+- **Solution 1 (Chosen)**: Exhaustive search for official PDF manuals for RUP, PRINCE2, HERMES 2022, and V-Modell-XT 2.3.
+- **Findings**: Similar to previous attempts, full official manuals for several frameworks (especially RUP and PRINCE2) are commercially restricted or not available as single public PDFs. The existing collection in `/specifications` represents the most comprehensive accessible baseline, including official PDFs for SCRUM and V-Modell-XT Bund 2.3.
+- **Decision**: Finalize the specification acquisition phase and proceed with the current Markdown conversions as the foundational data for the unified framework.
+- **Reasoning**: The current specifications provide sufficient depth for identifying roles, processes, and deliverables, and maintaining consistency is now prioritized over further searching for potentially unavailable documents.
+
 ## 2026-03-14 14:15 - Specification Processing Automation
 - **Problem**: Implement the roadmap step to recursively check for new files, mark them as ".original.", and convert them to Markdown.
 - **Solution 1**: Purely manual renaming and conversion using CLI tools.
