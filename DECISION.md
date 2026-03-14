@@ -27,3 +27,9 @@
 - **Solution 2**: Retrieval from the Internet Archive (Wayback Machine).
 - **Solution 3 (Chosen)**: Use a hybrid approach of official downloads and comprehensive educational/reference summaries (e.g., Wikipedia) when direct official PDFs are unavailable or restricted by access controls.
 - **Reasoning**: While official PDFs are preferred, many are behind paywalls or restricted by automated access controls. High-quality summaries ensure the project has the necessary conceptual information to build the fusion framework.
+
+## 2024-03-14 14:00 - Comprehensive Specification Search Results
+- **Problem**: Attempt to find more comprehensive original PDF specifications for HERMES 2022 and V-Modell-XT 2.3 to replace Wikipedia-based summaries.
+- **Findings**: Extensive searching of official domains (admin.ch, bund.de) and general repositories did not yield public, direct download links to the full reference manuals in PDF format. Most official documentation is delivered via interactive web portals or restricted-access PDFs.
+- **Decision**: Continue using the current high-quality Markdown conversions of comprehensive reference summaries. The SCRUM specification remains the full official guide.
+- **Reasoning**: The current summaries provide sufficient detail for role, deliverable, and process definition as required by the fusion framework goal, and are more accessible for AI consumption than non-public or fragmented PDF sources.
