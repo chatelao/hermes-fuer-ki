@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2025-05-15 14:30 - Specification Conversion Strategy
+- **Problem**: Convert downloaded specifications (HTML and PDF) to Markdown for readability and AI consumption, as required by GEMINI.md.
+- **Solution 1**: Use `lynx -dump` for HTML and `strings` for PDF.
+  - Reasoning: Uses pre-installed tools but results in poor formatting and potential data loss for PDFs.
+- **Solution 2 (Chosen)**: Use `html2text` for HTML and `pdfminer.six` (`pdf2txt.py`) for PDF.
+  - Reasoning: These specialized libraries provide much better Markdown/text conversion quality, preserving structure and links better than generic tools.
+- **Solution 3**: Manual conversion/transcription.
+  - Reasoning: Extremely time-consuming and prone to human error, although high quality.
+
 ## 2024-03-14 10:45 - Fifth Framework Choice
 - **Problem**: GEMINI.md requires adding one more framework of choice to the fusion list.
 - **Solution 1 (Chosen)**: PRINCE2. It is a widely recognized, process-based method for effective project management that complements the existing list well, especially Hermes and RUP.
