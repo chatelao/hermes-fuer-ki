@@ -1,5 +1,6 @@
 import yaml
 import os
+import subprocess
 
 def load_data(filepath):
     with open(filepath, 'r') as f:
@@ -67,8 +68,9 @@ def generate_mermaid(data, output_path):
     framework = data['framework']
     steps = framework['process_steps']
 
+    # We generate the mermaid file without the code block markers for mmdc compatibility
     with open(output_path, 'w') as f:
-        f.write("```mermaid\ngraph TD\n")
+        f.write("graph TD\n")
         for step in steps:
             # Nodes
             dp = step.get('decision_point', 'N/A')
@@ -83,12 +85,35 @@ def generate_mermaid(data, output_path):
         execution_loop_id = "step_execution_loop"
         if any(s['id'] == execution_loop_id for s in steps):
             f.write(f"    {execution_loop_id} --> {execution_loop_id}\n")
-        f.write("```\n")
+
+def generate_images(mmd_path, images_dir):
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
+
+    base_name = os.path.splitext(os.path.basename(mmd_path))[0]
+
+    formats = ["png", "svg"]
+    for fmt in formats:
+        output_path = os.path.join(images_dir, f"{base_name}.{fmt}")
+        try:
+            subprocess.run(
+                ["mmdc", "-i", mmd_path, "-o", output_path],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            print(f"Generated {output_path}")
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to generate {output_path}: {e.stderr}")
+        except FileNotFoundError:
+            print("Error: 'mmdc' command not found. Please install mermaid-cli.")
+            break
 
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     data_path = os.path.join(base_dir, "src", "data", "fusion_framework.yaml")
     docs_dir = os.path.join(base_dir, "src", "docs")
+    images_dir = os.path.join(base_dir, "src", "images")
 
     if not os.path.exists(docs_dir):
         os.makedirs(docs_dir)
@@ -97,9 +122,12 @@ def main():
 
     generate_overview(data, os.path.join(docs_dir, "framework_overview.md"))
     generate_raci(data, os.path.join(docs_dir, "raci_matrix.md"))
-    generate_mermaid(data, os.path.join(docs_dir, "process_flow.mmd"))
 
-    print("Deliverables generated successfully in src/docs/")
+    mmd_path = os.path.join(docs_dir, "process_flow.mmd")
+    generate_mermaid(data, mmd_path)
+    generate_images(mmd_path, images_dir)
+
+    print("Deliverables and images generated successfully.")
 
 if __name__ == "__main__":
     main()

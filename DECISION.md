@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-16 15:00 - Mermaid Image Generation Strategy
+- **Problem**: Implement automated generation of Mermaid diagrams to PNG/SVG in CI/CD.
+- **Solution 1 (Chosen): Integrated Python Scripting with Mermaid CLI**
+  - Reasoning: Leverages the existing Python-based generation pipeline. Using `mmdc` (Mermaid CLI) directly from the script ensures that documentation and images are always generated from the same source of truth and allows for easy local reproduction of the build process.
+- **Solution 2: Dedicated GitHub Action for Mermaid**
+  - Reasoning: Simplifies the CI/CD configuration by using a pre-built action, but creates a dependency on a third-party action and makes local image generation more difficult to maintain consistently with the CI environment.
+- **Solution 3: Client-side Rendering only**
+  - Reasoning: Minimal effort as it relies on Markdown viewers to render diagrams, but fails the requirement to provide static PNG/SVG artifacts for portability and offline use.
+
 ## 2026-03-16 14:00 - Framework Verification & Testing Strategy
 - **Problem**: Implement comprehensive test cases to verify all framework tasks as specified in the roadmap.
 - **Solution 1 (Chosen): Modular Pytest Suite**

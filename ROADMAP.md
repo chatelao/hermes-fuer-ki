@@ -1,14 +1,16 @@
 # ROADMAP
 
 ## Planned
-- [ ] Implement automated generation of Mermaid diagrams to PNG/SVG in CI/CD.
 - [ ] Expand `/src/docs` with detailed role descriptions and interaction guides.
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Develop a sample project instance to demonstrate framework application.
+- [ ] Implement an interactive CLI for "Handlers" to query framework deliverables.
+- [ ] Create a "Definition of Done" checklist generator based on deliverable accountability.
 
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Implemented automated generation of Mermaid diagrams to PNG/SVG in CI/CD using GitHub Actions.
 - [x] 2026-03-16: Implemented comprehensive test suite in `/test` (data integrity, referential integrity, design alignment, script execution).
 - [x] 2026-03-16: Developed scripts in `/src/scripts` for deliverable and documentation generation.
 - [x] 2026-03-16: Created initial test data in `/src/data` and automated integrity validation.
