@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Create comprehensive test cases in `/test` to verify all framework tasks.
 - [ ] Implement automated generation of Mermaid diagrams to PNG/SVG in CI/CD.
 - [ ] Expand `/src/docs` with detailed role descriptions and interaction guides.
 - [ ] Integrate traceability checks into the validation script.
@@ -10,6 +9,7 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Implemented comprehensive test suite in `/test` (data integrity, referential integrity, design alignment, script execution).
 - [x] 2026-03-16: Developed scripts in `/src/scripts` for deliverable and documentation generation.
 - [x] 2026-03-16: Created initial test data in `/src/data` and automated integrity validation.
 - [x] 2026-03-16: Implemented initial schema in `/src/schema` using YAML and JSON Schema.

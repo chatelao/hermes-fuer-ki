@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-16 14:00 - Framework Verification & Testing Strategy
+- **Problem**: Implement comprehensive test cases to verify all framework tasks as specified in the roadmap.
+- **Solution 1 (Chosen): Modular Pytest Suite**
+  - Reasoning: Implementing separate test files for data integrity, referential integrity, design alignment, and script execution provides a modular and maintainable verification system that clearly identifies failure points.
+- **Solution 2: Monolithic Verification Script**
+  - Reasoning: Easier to run as a single command, but lacks the granularity and reporting benefits of a standard testing framework like pytest.
+- **Solution 3: Validation-Script Centric Testing**
+  - Reasoning: Consolidates logic but mixes validation with testing concerns, making it harder to verify the behavior of generation scripts themselves.
+
 ## 2026-03-16 13:00 - Documentation & Deliverable Generation Strategy
 - **Problem**: Select an approach for generating documentation, RACI matrices, and process diagrams from the YAML source data.
 - **Solution 1 (Chosen): Direct Python Scripting (String Interpolation)**

@@ -27,5 +27,7 @@ def test_data_validation():
 
     assert overall_success, "One or more YAML files failed schema validation."
 
+import pytest
+
 if __name__ == "__main__":
-    test_data_validation()
+    sys.exit(pytest.main([__file__]))
