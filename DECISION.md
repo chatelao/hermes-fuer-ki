@@ -49,3 +49,12 @@
   - Reasoning: Provides a good balance between automation and control, ensuring all files are correctly handled according to the naming convention and converted efficiently.
 - **Solution 3**: Develop a custom Python script for the entire pipeline.
   - Reasoning: Robust and reusable, but potentially overkill for the current number of files and initial setup phase.
+
+## 2026-03-15 12:00 - AI-Friendly Schema Format Choice
+- **Problem**: Research and define the best schema format for the unified system that balances AI observability with human ease of interaction (as "handlers").
+- **Solution 1**: JSON-LD (Linked Data).
+  - Reasoning: Excellent for AI semantic reasoning and cross-framework linking, but potentially overwhelming for human "handlers" to manage manually.
+- **Solution 2 (Chosen)**: YAML for data storage/interaction, validated by JSON Schema.
+  - Reasoning: YAML provides the best balance of human readability for "handlers of the start, conflicts, and exceptions" while JSON Schema ensures the rigid structure required for AI observability and automated verification.
+- **Solution 3**: Markdown with Frontmatter.
+  - Reasoning: Highly readable, but less efficient for modeling complex relational data structures between roles, deliverables, and process steps compared to a dedicated data format.
