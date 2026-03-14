@@ -1,0 +1,105 @@
+import yaml
+import os
+
+def load_data(filepath):
+    with open(filepath, 'r') as f:
+        return yaml.safe_load(f)
+
+def generate_overview(data, output_path):
+    framework = data['framework']
+    with open(output_path, 'w') as f:
+        f.write(f"# {framework['name']}\n\n")
+        f.write(f"Version: {framework['version']}\n\n")
+
+        f.write("## Roles\n\n")
+        for role in framework['roles']:
+            f.write(f"### {role['name']} (`{role['id']}`)\n")
+            f.write(f"- **Description**: {role['description']}\n")
+            f.write(f"- **Accountability**: {role['accountability']}\n")
+            if 'human_interaction' in role:
+                f.write(f"- **Human Interaction**: {role['human_interaction']}\n")
+            f.write("\n")
+
+        f.write("## Deliverables\n\n")
+        f.write("| ID | Name | Description | Accountability |\n")
+        f.write("|----|------|-------------|----------------|\n")
+        roles_dict = {r['id']: r['name'] for r in framework['roles']}
+        for deliv in framework['deliverables']:
+            acc = roles_dict.get(deliv['accountability_id'], deliv['accountability_id'])
+            f.write(f"| `{deliv['id']}` | {deliv['name']} | {deliv['description']} | {acc} |\n")
+        f.write("\n")
+
+        f.write("## Process Steps\n\n")
+        for step in framework['process_steps']:
+            f.write(f"### {step['name']} (`{step['id']}`)\n")
+            f.write(f"- **Primary Role**: {roles_dict.get(step['primary_role_id'], step['primary_role_id'])}\n")
+            f.write(f"- **Objective**: {step['objective']}\n")
+            if 'activities' in step:
+                f.write("- **Activities**:\n")
+                for act in step['activities']:
+                    f.write(f"  - {act}\n")
+            if 'decision_point' in step:
+                f.write(f"- **Decision Point**: **{step['decision_point']}**\n")
+            f.write("\n")
+
+def generate_raci(data, output_path):
+    framework = data['framework']
+    roles = framework['roles']
+    deliverables = framework['deliverables']
+
+    with open(output_path, 'w') as f:
+        f.write("# RACI Matrix\n\n")
+        header = "| Deliverable | " + " | ".join([r['name'] for r in roles]) + " |"
+        f.write(header + "\n")
+        f.write("|" + "---|" * (len(roles) + 1) + "\n")
+
+        for d in deliverables:
+            row = f"| {d['name']} |"
+            for r in roles:
+                if d['accountability_id'] == r['id']:
+                    row += " A/R |"
+                else:
+                    row += " |"
+            f.write(row + "\n")
+        f.write("\n\n*A/R: Accountable & Responsible* (Simplified for this framework)\n\n")
+
+def generate_mermaid(data, output_path):
+    framework = data['framework']
+    steps = framework['process_steps']
+
+    with open(output_path, 'w') as f:
+        f.write("```mermaid\ngraph TD\n")
+        for step in steps:
+            # Nodes
+            dp = step.get('decision_point', 'N/A')
+            f.write(f"    {step['id']}[\"{step['name']}<br/>({dp})\"]\n")
+
+        # Connections
+        for i in range(len(steps) - 1):
+            f.write(f"    {steps[i]['id']} --> {steps[i+1]['id']}\n")
+
+        # Add a back link for loops if explicitly defined or by convention
+        # For now, keeping the execution loop logic but making it safe
+        execution_loop_id = "step_execution_loop"
+        if any(s['id'] == execution_loop_id for s in steps):
+            f.write(f"    {execution_loop_id} --> {execution_loop_id}\n")
+        f.write("```\n")
+
+def main():
+    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    data_path = os.path.join(base_dir, "src", "data", "fusion_framework.yaml")
+    docs_dir = os.path.join(base_dir, "src", "docs")
+
+    if not os.path.exists(docs_dir):
+        os.makedirs(docs_dir)
+
+    data = load_data(data_path)
+
+    generate_overview(data, os.path.join(docs_dir, "framework_overview.md"))
+    generate_raci(data, os.path.join(docs_dir, "raci_matrix.md"))
+    generate_mermaid(data, os.path.join(docs_dir, "process_flow.mmd"))
+
+    print("Deliverables generated successfully in src/docs/")
+
+if __name__ == "__main__":
+    main()

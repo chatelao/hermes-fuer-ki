@@ -1,13 +1,16 @@
 # ROADMAP
 
 ## Planned
-- [ ] Develop scripts in `/src/scripts` to verify the data and generate deliverables.
-- [ ] Generate documentation and images in `/src/docs` and `/src/images` from the source data.
 - [ ] Create comprehensive test cases in `/test` to verify all framework tasks.
+- [ ] Implement automated generation of Mermaid diagrams to PNG/SVG in CI/CD.
+- [ ] Expand `/src/docs` with detailed role descriptions and interaction guides.
+- [ ] Integrate traceability checks into the validation script.
+- [ ] Develop a sample project instance to demonstrate framework application.
 
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Developed scripts in `/src/scripts` for deliverable and documentation generation.
 - [x] 2026-03-16: Created initial test data in `/src/data` and automated integrity validation.
 - [x] 2026-03-16: Implemented initial schema in `/src/schema` using YAML and JSON Schema.
 - [x] 2026-03-16: Created unified overview of matching roles in `specifications/OLD_ROLES_OVERVIEW.md`.

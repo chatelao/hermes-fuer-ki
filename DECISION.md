@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-16 13:00 - Documentation & Deliverable Generation Strategy
+- **Problem**: Select an approach for generating documentation, RACI matrices, and process diagrams from the YAML source data.
+- **Solution 1 (Chosen): Direct Python Scripting (String Interpolation)**
+  - Reasoning: Simple, lightweight, and requires no additional dependencies beyond what is already used for validation. It provides sufficient flexibility for generating Markdown and Mermaid files.
+- **Solution 2: Template-based Generation (Jinja2)**
+  - Reasoning: More robust for complex documentation layouts and separates logic from presentation, but introduces an external dependency.
+- **Solution 3: Specialized Documentation Framework (MkDocs/Sphinx)**
+  - Reasoning: Provides a professional-grade documentation site, but is likely overkill for the current project scope and adds significant complexity to the build process.
+
 ## 2026-03-16 12:00 - Project Data Organization & Schema Validation
 - **Problem**: Define the optimal location for the primary framework data and test instances to ensure compliance with `GEMINI.md` and support AI observability.
 - **Solution 1: Framework definition in `/src/schema`**
