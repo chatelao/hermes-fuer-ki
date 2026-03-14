@@ -18,3 +18,4 @@
 
 
 *A/R: Accountable & Responsible* (Simplified for this framework)
+
