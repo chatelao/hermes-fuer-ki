@@ -43,15 +43,19 @@ Deliverables are categorized by the accountability of the five core roles.
 
 | Unified Deliverable | Description | Source Framework Mapping | Accountability |
 |---------------------|-------------|-------------------------|----------------|
-| **Project Vision & Business Case** | Defines the strategic goal, economic viability, and success criteria. | RUP Vision, PRINCE2 Business Case, V-Modell Projektauftrag | Handler of Start |
-| **Strategic Backlog & Priorities** | High-level list of desired outcomes, ranked by value. | Scrum Product Backlog, PRINCE2 Project Brief | Handler of Conflicts |
-| **Risk & Tolerance Baseline** | Definition of acceptable deviations and critical risk responses. | PRINCE2 Risk Register, RUP Risk List | Handler of Exceptions |
-| **Integrated Operational Plan** | Dynamic plan for current and upcoming work cycles. | PRINCE2 Stage Plan, RUP Iteration Plan, V-Modell Projektplan | AI Orchestrator |
-| **Automated Status Feed** | Real-time, transparent data stream of progress and health. | PRINCE2 Highlight Report, V-Modell Projektstatusbericht | AI Orchestrator |
-| **Unified Traceability Ledger** | Immutable record of requirements, changes, and quality evidence. | V-Modell Produktbibliothek, PRINCE2 Quality Register | AI Orchestrator |
-| **System Architecture & Specs** | Technical design and detailed implementation requirements. | RUP SAD, V-Modell Systemarchitektur, Hermes System-Spezifikation | Delivery Specialist |
+| **Project Vision** | High-level goal and definition of success. | RUP Vision, V-Modell Projektvorschlag | Handler of Start |
+| **Business Case** | Economic viability and justification for the project. | PRINCE2 Business Case, Hermes Business Case | Handler of Start |
+| **Strategic Backlog** | Comprehensive list of desired outcomes. | Scrum Product Backlog | Handler of Conflicts |
+| **Governance Guardrails** | Priorities and decision-making frameworks. | PRINCE2 Project Brief (Governance part) | Handler of Conflicts |
+| **Risk Register** | List of identified risks and mitigation strategies. | PRINCE2 Risk Register, RUP Risk List | Handler of Exceptions |
+| **Tolerance Baseline** | Defined boundaries for autonomous AI operation. | PRINCE2 Tolerances | Handler of Exceptions |
+| **Integrated Operational Plan** | Dynamic plan for current and upcoming work cycles. | PRINCE2 Stage Plan, RUP Iteration Plan | AI Orchestrator |
+| **Automated Status Feed** | Real-time, transparent data stream of progress and health. | PRINCE2 Highlight Report | AI Orchestrator |
+| **Unified Traceability Ledger** | Immutable record of requirements, changes, and quality. | V-Modell Produktbibliothek | AI Orchestrator |
+| **System Architecture** | High-level technical design and structure. | RUP SAD, V-Modell Systemarchitektur | Delivery Specialist |
+| **Implementation Specs** | Detailed requirements for implementation. | Hermes System-Spezifikation | Delivery Specialist |
 | **Deliverable Increment** | Usable, verified product or service component. | Scrum Increment, PRINCE2 Product | Delivery Specialist |
-| **Quality & Compliance Evidence** | Verification results ensuring the increment meets the "Definition of Done". | V-Modell Prüfprotokoll, PRINCE2 Checkpoint Report | Delivery Specialist |
+| **Quality & Compliance Evidence** | Verification results ensuring the "Definition of Done". | V-Modell Prüfprotokoll | Delivery Specialist |
 
 ## AI Observability Integration
 

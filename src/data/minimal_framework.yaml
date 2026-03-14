@@ -1,0 +1,17 @@
+framework:
+  name: "Minimal Framework"
+  version: "0.1.0"
+  roles:
+    - id: "role_handler_start"
+      name: "Minimal Role"
+      description: "A minimal role for testing."
+      accountability: "Basic accountability."
+  deliverables:
+    - id: "del_minimal"
+      name: "Minimal Deliverable"
+      description: "A minimal deliverable for testing."
+      accountability_id: "role_handler_start"
+  process_steps:
+    - id: "step_minimal"
+      name: "Minimal Step"
+      primary_role_id: "role_handler_start"
