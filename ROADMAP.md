@@ -1,6 +1,7 @@
 # ROADMAP
 
 ## Planned
+- [ ] Check /specification recursive for new files, mark then ".original." and convert them to Markdown.
 - [ ] Search the most comprehensive original specification (usually PDF) and convert to Markdown.
 - [ ] Research AI-friendly schema formats (JSON-LD, etc.) for the unified system.
 - [ ] Define initial set of unified roles based on the five frameworks.
