@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-16 10:00 - Unified Process & Deliverables Architecture
+- **Problem**: Define unified deliverables and process steps for the Fusion framework that balance AI observability with the human "Handler" role model.
+- **Solution 1: Phase-based Model (Classic Lifecycle)**
+  - Reasoning: Familiar and structured (like RUP/V-Modell), but risks being too rigid for AI-led orchestration.
+- **Solution 2: Event-driven Model (Fluid/Agile)**
+  - Reasoning: Highly flexible, but lacks the clear strategic human decision points required by the GEMINI mandate.
+- **Solution 3 (Chosen): Decision-point centric Model (The "Handler" Loop)**
+  - Reasoning: Re-aligns the process around the three human "Handlers" (Start, Conflicts, Exceptions), making the human-AI interaction patterns the primary structure. This directly supports the goal of human ease of interaction at critical junctures while allowing AI to handle the operational flow between decisions.
+
 ## 2026-03-15 13:00 - Unified Role System Architecture
 - **Problem**: Define a unified role system that fuses RUP, V-Modell-XT, Hermes, SCRUM, and PRINCE2, emphasizing AI observability and human ease of interaction (Handlers of Start, Conflicts, and Exceptions).
 - **Solution 1: Direct Accountability Mapping (The "Handler" Core)**

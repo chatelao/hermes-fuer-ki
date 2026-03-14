@@ -1,13 +1,16 @@
 # ROADMAP
 
 ## Planned
-- [ ] Define unified deliverables and process steps.
 - [ ] Implement initial schema in `/src/schema` using YAML and JSON Schema.
 - [ ] Create initial test data in `/src/data` to verify schema and role definitions.
+- [ ] Develop scripts in `/src/scripts` to verify the data and generate deliverables.
+- [ ] Generate documentation and images in `/src/docs` and `/src/images` from the source data.
+- [ ] Create comprehensive test cases in `/test` to verify all framework tasks.
 
 ## Proposed
 
 ## Finished
+- [x] 2026-03-16: Defined unified deliverables and process steps in `design/unified_process_deliverables.md`.
 - [x] 2026-03-15: Defined unified roles and drafted initial design documentation in `/design/unified_roles.md`.
 - [x] 2026-03-15: Researched and selected YAML/JSON Schema for AI observability and human interaction.
 - [x] 2026-03-15: Verified comprehensive original specifications and confirmed current Markdown baseline.
