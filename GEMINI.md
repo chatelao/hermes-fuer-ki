@@ -20,9 +20,6 @@
   - Add 0-5 substeps depending on the step complexity and/or usefullness of intermediate results.
   -   All substep have checkboxes too.
 
-## Planning
-- If necessary split steps into 2-5 additional substeps if the complexity of the task is high.
-
 ## Solving
 - For each problem first draft three different solutions and then choose the best one.
    - Insert each problem with timestamp (heading) and each variant solutions (sub-heading)
