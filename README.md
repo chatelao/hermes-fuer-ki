@@ -13,6 +13,9 @@ The framework is designed to be AI and human-friendly, with a focus on observabi
 - **Handler of conflicts**
 - **Handler of exceptions**
 
+## Process Overview
+![Process Overview](src/images/process_overview.png)
+
 ## Project Structure
 - `GEMINI.md`: Project requirements and constraints.
 - `README.md`: Overview of the product.

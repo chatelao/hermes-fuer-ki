@@ -1,0 +1,36 @@
+@startuml
+skinparam actorStyle awesome
+actor "Handler of Start" as Start <<Strategic>>
+actor "Handler of Conflicts" as Conflicts <<Governance>>
+actor "Handler of Exceptions" as Exceptions <<Tactical>>
+participant "AI Orchestrator" as AI <<Operational>>
+actor "Delivery Specialist" as Delivery <<Technical>>
+
+== Starting Decision ==
+Start -> AI: Authorization to Invest
+note right: Outputs: Project Vision,\nBusiness Case
+
+== Alignment Decision ==
+AI -> Conflicts: Request Alignment
+Conflicts -> AI: Commitment to Scope & Priorities
+note right: Outputs: Strategic Backlog,\nGovernance Guardrails
+
+== Execution Loop ==
+loop continuous delivery
+    AI -> Delivery: Orchestrate Tasks
+    Delivery -> AI: Deliver Increment
+    note right: Outputs: Increment,\nOperational Plan
+    AI -> AI: Check Tolerances & Observability
+
+    alt Out of Tolerance (Exception)
+        AI -> Exceptions: Alert / Flag Exception
+        Exceptions -> AI: Course Correction / Pivot
+        note right: Outputs: Risk Register,\nTolerance Baseline
+    end
+end
+
+== Realization Decision ==
+AI -> Start: Realization Evidence
+Start -> AI: Authorization of Closure
+note right: Outputs: Quality & Compliance\nEvidence
+@enduml

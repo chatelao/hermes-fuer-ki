@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-20 09:00 - Process Overview Diagram Integration
+- **Problem**: Create a process overview using PlantUML and integrate it into the README.md.
+- **Solution 1: Manual Generation and Embedding**
+  - Reasoning: Simple to implement initially, but fails to maintain the "automated deliverables" requirement, leading to potential documentation drift.
+- **Solution 2 (Chosen): Integrated Python Scripting with PlantUML JAR**
+  - Reasoning: Automates the generation of PlantUML diagrams alongside existing Mermaid diagrams in the `generate_deliverables.py` script. By downloading the JAR if missing, it ensures the build remains portable and consistent across environments that have Java installed.
+- **Solution 3: Using an Online PlantUML Renderer (e.g., Kroki.io)**
+  - Reasoning: Eliminates the need for a local Java/PlantUML setup, but introduces a dependency on an external web service and potential privacy/connectivity issues.
+
 ## 2026-03-19 10:00 - Deliverable Template Architecture
 - **Problem**: Define the architecture and location for deliverable templates to support the roadmap.
 - **Solution 1 (Chosen): Modular YAML Templates in `src/data/templates/`**

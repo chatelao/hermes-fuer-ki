@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Implement an interactive CLI for "Handlers" to query framework deliverables.
 - [ ] Create a "Definition of Done" checklist generator based on deliverable accountability.
@@ -9,6 +8,11 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-20: Created a process overview using PlantUML and integrated the image into the README.md.
+  - [x] Drafted solution in `DECISION.md`
+  - [x] Created `src/docs/process_overview.puml`
+  - [x] Automated PlantUML generation in `src/scripts/generate_deliverables.py`
+  - [x] Integrated image into `README.md`
 - [x] 2026-03-19: Added deliverable templates and template directory to the project.
   - [x] Create template directory `src/data/templates/`
   - [x] Create `project_manifest.yaml` template

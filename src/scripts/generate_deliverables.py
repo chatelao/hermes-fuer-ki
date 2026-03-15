@@ -1,6 +1,7 @@
 import yaml
 import os
 import subprocess
+import urllib.request
 
 def load_data(filepath):
     with open(filepath, 'r') as f:
@@ -151,11 +152,41 @@ def generate_images(mmd_path, images_dir):
             print("Error: 'mmdc' command not found. Please install mermaid-cli.")
             break
 
+def generate_plantuml(docs_dir, images_dir, jar_path):
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
+
+    if not os.path.exists(jar_path):
+        print(f"PlantUML JAR not found at {jar_path}. Attempting to download...")
+        url = "https://github.com/plantuml/plantuml/releases/download/v1.2024.3/plantuml-1.2024.3.jar"
+        try:
+            urllib.request.urlretrieve(url, jar_path)
+            print(f"Downloaded PlantUML JAR to {jar_path}")
+        except Exception as e:
+            print(f"Failed to download PlantUML JAR: {e}")
+            return
+
+    for file in os.listdir(docs_dir):
+        if file.endswith(".puml"):
+            puml_path = os.path.join(docs_dir, file)
+            print(f"Processing PlantUML file: {puml_path}")
+            try:
+                subprocess.run(
+                    ["java", "-jar", jar_path, "-o", os.path.abspath(images_dir), puml_path],
+                    check=True,
+                    capture_output=True,
+                    text=True
+                )
+                print(f"Generated images for {file} in {images_dir}")
+            except subprocess.CalledProcessError as e:
+                print(f"Failed to generate PlantUML images for {file}: {e.stderr}")
+
 def main():
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     data_path = os.path.join(base_dir, "src", "data", "fusion_framework.yaml")
     docs_dir = os.path.join(base_dir, "src", "docs")
     images_dir = os.path.join(base_dir, "src", "images")
+    jar_path = os.path.join(base_dir, "src", "scripts", "plantuml.jar")
 
     if not os.path.exists(docs_dir):
         os.makedirs(docs_dir)
@@ -169,6 +200,8 @@ def main():
     mmd_path = os.path.join(docs_dir, "process_flow.mmd")
     generate_mermaid(data, mmd_path)
     generate_images(mmd_path, images_dir)
+
+    generate_plantuml(docs_dir, images_dir, jar_path)
 
     print("Deliverables and images generated successfully.")
 
