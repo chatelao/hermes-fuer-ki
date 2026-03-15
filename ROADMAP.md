@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Add tasks to create each of the deliverables as template to this roadmap, add a template directory to the project
 - [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Implement an interactive CLI for "Handlers" to query framework deliverables.
@@ -10,6 +9,22 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-19: Added deliverable templates and template directory to the project.
+  - [x] Create template directory `src/data/templates/`
+  - [x] Create `project_manifest.yaml` template
+  - [x] Create `vision.yaml` template
+  - [x] Create `business_case.yaml` template
+  - [x] Create `strategic_backlog.yaml` template
+  - [x] Create `governance_guardrails.yaml` template
+  - [x] Create `risk_register.yaml` template
+  - [x] Create `tolerance_baseline.yaml` template
+  - [x] Create `operational_plan.yaml` template
+  - [x] Create `status_feed.yaml` template
+  - [x] Create `traceability_ledger.yaml` template
+  - [x] Create `system_architecture.yaml` template
+  - [x] Create `implementation_specs.yaml` template
+  - [x] Create `increment.yaml` template
+  - [x] Create `quality_evidence.yaml` template
 - [x] 2026-03-18: Developed and executed a sample project instance ('Project Phoenix') to demonstrate framework application.
 - [x] 2026-03-17: Expanded `/src/docs` with detailed role descriptions and interaction guides, including automated role page generation.
 - [x] 2026-03-16: Implemented automated generation of Mermaid diagrams to PNG/SVG in CI/CD using GitHub Actions.

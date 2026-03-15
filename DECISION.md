@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-19 10:00 - Deliverable Template Architecture
+- **Problem**: Define the architecture and location for deliverable templates to support the roadmap.
+- **Solution 1 (Chosen): Modular YAML Templates in `src/data/templates/`**
+  - Reasoning: Providing individual YAML templates for each deliverable, alongside a `project_manifest.yaml` template, allows users to easily bootstrap new projects. Storing them in `src/data/templates/` keeps them organized and separate from active project data while remaining under the `/src/data` umbrella as instances of the schema.
+- **Solution 2: Monolithic Template File**
+  - Reasoning: Simpler to copy a single file, but inconsistent with the chosen modular project architecture and harder to validate granularly.
+- **Solution 3: Embedded Templates in Documentation**
+  - Reasoning: Good for quick reference but requires manual copy-pasting and extra steps for users to create valid YAML files.
+
 ## 2026-03-18 09:00 - Sample Project Instance Architecture
 - **Problem**: Define the architecture for executing a sample project instance as per the roadmap.
 - **Solution 1: Monolithic Project YAML**
