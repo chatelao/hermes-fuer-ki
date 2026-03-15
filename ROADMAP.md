@@ -1,6 +1,7 @@
 # ROADMAP
 
 ## Planned
+- [ ] Add tasks to create each of the deliverables as template to this roadmap, add a template directory to the project
 - [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Implement an interactive CLI for "Handlers" to query framework deliverables.
