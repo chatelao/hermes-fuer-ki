@@ -18,6 +18,22 @@
               "description": { "type": "string" },
               "accountability": { "type": "string" },
               "human_interaction": { "type": "string" },
+              "responsibilities": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "interactions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "role_id": { "type": "string", "pattern": "^role_" },
+                    "description": { "type": "string" }
+                  },
+                  "required": ["role_id", "description"]
+                }
+              },
+              "interaction_guide": { "type": "string" },
               "mapping": {
                 "type": "object",
                 "additionalProperties": { "type": "string" }

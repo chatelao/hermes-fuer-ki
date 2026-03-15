@@ -14,7 +14,7 @@ def generate_overview(data, output_path):
 
         f.write("## Roles\n\n")
         for role in framework['roles']:
-            f.write(f"### {role['name']} (`{role['id']}`)\n")
+            f.write(f"### [{role['name']}](roles/{role['id']}.md) (`{role['id']}`)\n")
             f.write(f"- **Description**: {role['description']}\n")
             f.write(f"- **Accountability**: {role['accountability']}\n")
             if 'human_interaction' in role:
@@ -42,6 +42,48 @@ def generate_overview(data, output_path):
             if 'decision_point' in step:
                 f.write(f"- **Decision Point**: **{step['decision_point']}**\n")
             f.write("\n")
+
+def generate_role_pages(data, roles_dir):
+    framework = data['framework']
+    roles = framework['roles']
+    roles_dict = {r['id']: r['name'] for r in roles}
+
+    if not os.path.exists(roles_dir):
+        os.makedirs(roles_dir)
+
+    for role in roles:
+        role_path = os.path.join(roles_dir, f"{role['id']}.md")
+        with open(role_path, 'w') as f:
+            f.write(f"# Role: {role['name']}\n\n")
+            f.write(f"**ID**: `{role['id']}`\n\n")
+            f.write(f"## Description\n{role['description']}\n\n")
+            f.write(f"## Accountability\n{role['accountability']}\n\n")
+
+            if 'human_interaction' in role:
+                f.write(f"## Human Interaction\n{role['human_interaction']}\n\n")
+
+            if 'responsibilities' in role:
+                f.write("## Key Responsibilities\n")
+                for resp in role['responsibilities']:
+                    f.write(f"- {resp}\n")
+                f.write("\n")
+
+            if 'interactions' in role:
+                f.write("## Interaction Guide\n")
+                if 'interaction_guide' in role:
+                    f.write(f"{role['interaction_guide']}\n\n")
+
+                f.write("### Cross-Role Interactions\n")
+                for interaction in role['interactions']:
+                    other_role_name = roles_dict.get(interaction['role_id'], interaction['role_id'])
+                    f.write(f"- **With {other_role_name}**: {interaction['description']}\n")
+                f.write("\n")
+
+            if 'mapping' in role:
+                f.write("## Framework Mapping\n")
+                for fw, mapped_role in role['mapping'].items():
+                    f.write(f"- **{fw}**: {mapped_role}\n")
+                f.write("\n")
 
 def generate_raci(data, output_path):
     framework = data['framework']
@@ -121,6 +163,7 @@ def main():
     data = load_data(data_path)
 
     generate_overview(data, os.path.join(docs_dir, "framework_overview.md"))
+    generate_role_pages(data, os.path.join(docs_dir, "roles"))
     generate_raci(data, os.path.join(docs_dir, "raci_matrix.md"))
 
     mmd_path = os.path.join(docs_dir, "process_flow.mmd")

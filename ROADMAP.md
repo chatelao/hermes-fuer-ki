@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Expand `/src/docs` with detailed role descriptions and interaction guides.
 - [ ] Develop and execute a sample project instance into /samples to demonstrate framework application.
 - [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
@@ -11,6 +10,7 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-17: Expanded `/src/docs` with detailed role descriptions and interaction guides, including automated role page generation.
 - [x] 2026-03-16: Implemented automated generation of Mermaid diagrams to PNG/SVG in CI/CD using GitHub Actions.
 - [x] 2026-03-16: Implemented comprehensive test suite in `/test` (data integrity, referential integrity, design alignment, script execution).
 - [x] 2026-03-16: Developed scripts in `/src/scripts` for deliverable and documentation generation.

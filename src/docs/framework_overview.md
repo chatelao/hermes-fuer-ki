@@ -4,27 +4,27 @@ Version: 1.0.0
 
 ## Roles
 
-### Handler of the Start (Strategic) (`role_handler_start`)
+### [Handler of the Start (Strategic)](roles/role_handler_start.md) (`role_handler_start`)
 - **Description**: Focuses on the 'Why' and 'Whether' of the project.
 - **Accountability**: Initializing the project, defining the vision, securing funding, and setting the 'Definition of Success'.
 - **Human Interaction**: Decisions on authorization to invest and project closure.
 
-### Handler of Conflicts (Governance) (`role_handler_conflicts`)
+### [Handler of Conflicts (Governance)](roles/role_handler_conflicts.md) (`role_handler_conflicts`)
 - **Description**: Focuses on priority clashes and stakeholder alignment.
 - **Accountability**: Resolving priority clashes, resource competition, and stakeholder misalignments.
 - **Human Interaction**: High-level mediation and value-based prioritization.
 
-### Handler of Exceptions (Tactical) (`role_handler_exceptions`)
+### [Handler of Exceptions (Tactical)](roles/role_handler_exceptions.md) (`role_handler_exceptions`)
 - **Description**: Focuses on managing deviations and risks.
 - **Accountability**: Handling deviations from the plan, risk materialization, and 'Out of Tolerance' events.
 - **Human Interaction**: Intervention when AI-guided automation hits a boundary.
 
-### AI Orchestrator (Operational) (`role_ai_orchestrator`)
+### [AI Orchestrator (Operational)](roles/role_ai_orchestrator.md) (`role_ai_orchestrator`)
 - **Description**: Handles day-to-day workflow management and observability.
 - **Accountability**: Day-to-day workflow management, progress tracking, deliverable linking, and documentation maintenance.
 - **Human Interaction**: Provides real-time transparency and bottleneck detection to human handlers.
 
-### Delivery Specialist (Technical) (`role_delivery_specialist`)
+### [Delivery Specialist (Technical)](roles/role_delivery_specialist.md) (`role_delivery_specialist`)
 - **Description**: Focuses on creation of deliverables and implementation.
 - **Accountability**: Creation of deliverables, quality assurance, and technical implementation.
 - **Human Interaction**: Expert execution guided by AI-defined standards.
