@@ -2,6 +2,7 @@
 
 ## Planned
 - [ ] Expand `/src/docs` with detailed role descriptions and interaction guides.
+- [ ] Create and execute a sample project implementing a WebShop with this methode in /samples.
 - [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Develop a sample project instance to demonstrate framework application.
