@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-18 09:00 - Sample Project Instance Architecture
+- **Problem**: Define the architecture for executing a sample project instance as per the roadmap.
+- **Solution 1: Monolithic Project YAML**
+  - Reasoning: Simple to manage as a single file, but becomes unwieldy as project complexity and deliverable detail grow.
+- **Solution 2 (Chosen): Directory-based Modular YAMLs**
+  - Reasoning: A `project_manifest.yaml` links to individual deliverable YAML files in a dedicated project directory. This mirrors the framework's modular design, improves human readability/editability of specific documents, and allows for granular schema validation.
+- **Solution 3: Interactive State-only JSON**
+  - Reasoning: Optimized for tool consumption, but fails the "human ease of interaction" requirement for reviewing and editing deliverables.
+
 ## 2026-03-17 10:00 - Detailed Role Descriptions & Interaction Guides Strategy
 - **Problem**: Expand the framework to provide detailed role descriptions and interaction guides as per the roadmap.
 - **Solution 1 (Chosen): Structured YAML Data with Individual Documentation Pages**

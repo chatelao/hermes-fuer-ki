@@ -1,0 +1,5 @@
+deliverable:
+  framework_id: "del_strategic_backlog"
+  name: "Project Phoenix Strategic Backlog"
+  status: "draft"
+  content: "1. Core system API extraction, 2. AI model integration, 3. Handler dashboard development."

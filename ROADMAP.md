@@ -1,7 +1,6 @@
 # ROADMAP
 
 ## Planned
-- [ ] Develop and execute a sample project instance into /samples to demonstrate framework application.
 - [ ] Create a process overview using plantUML and integrate the image into the README.md
 - [ ] Integrate traceability checks into the validation script.
 - [ ] Implement an interactive CLI for "Handlers" to query framework deliverables.
@@ -10,6 +9,7 @@
 ## Proposed
 
 ## Finished
+- [x] 2026-03-18: Developed and executed a sample project instance ('Project Phoenix') to demonstrate framework application.
 - [x] 2026-03-17: Expanded `/src/docs` with detailed role descriptions and interaction guides, including automated role page generation.
 - [x] 2026-03-16: Implemented automated generation of Mermaid diagrams to PNG/SVG in CI/CD using GitHub Actions.
 - [x] 2026-03-16: Implemented comprehensive test suite in `/test` (data integrity, referential integrity, design alignment, script execution).

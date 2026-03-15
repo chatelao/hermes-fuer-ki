@@ -1,0 +1,11 @@
+project:
+  name: "Project Phoenix"
+  version: "1.0.0"
+  framework_ref: "fusion_framework.yaml"
+  deliverables:
+    - framework_id: "del_vision"
+      file: "vision.yaml"
+    - framework_id: "del_business_case"
+      file: "business_case.yaml"
+    - framework_id: "del_strategic_backlog"
+      file: "backlog.yaml"

@@ -1,0 +1,6 @@
+pdfminer.six
+html2text
+beautifulsoup4
+PyYAML
+jsonschema
+pytest

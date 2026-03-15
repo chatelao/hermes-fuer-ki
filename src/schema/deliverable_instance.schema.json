@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Deliverable Instance Schema",
+  "type": "object",
+  "properties": {
+    "deliverable": {
+      "type": "object",
+      "properties": {
+        "framework_id": { "type": "string", "pattern": "^del_" },
+        "name": { "type": "string" },
+        "content": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "final", "approved"]
+        }
+      },
+      "required": ["framework_id", "name", "content", "status"]
+    }
+  },
+  "required": ["deliverable"]
+}
