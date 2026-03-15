@@ -1,0 +1,5 @@
+deliverable:
+  framework_id: "del_operational_plan"
+  name: "Project Phoenix Operational Plan"
+  status: "approved"
+  content: "Iteration 1: Environment setup and API discovery. Iteration 2: Core extraction. Iteration 3: AI integration."
