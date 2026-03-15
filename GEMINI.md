@@ -20,6 +20,11 @@
   - Add 0-5 substeps depending on the step complexity and/or usefullness of intermediate results.
   -   All substep have checkboxes too.
 
+## GitHub integration
+  - When starting the work with the issue (only once for each issue):
+    - Copy the title as first line in the body of the issue
+    - Set a new, better summary as title of the issue
+
 ## Solving
 - For each problem first draft three different solutions and then choose the best one.
    - Insert each problem with timestamp (heading) and each variant solutions (sub-heading)
