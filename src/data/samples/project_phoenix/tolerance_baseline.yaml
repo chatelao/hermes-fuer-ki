@@ -1,0 +1,5 @@
+deliverable:
+  framework_id: "del_tolerance_baseline"
+  name: "Project Phoenix Tolerance Baseline"
+  status: "approved"
+  content: "Schedule: +/- 5 days per iteration. Budget: +/- 10% per work package. Quality: 100% critical test pass rate."

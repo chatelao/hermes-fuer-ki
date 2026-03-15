@@ -1,0 +1,5 @@
+deliverable:
+  framework_id: "del_risk_register"
+  name: "Project Phoenix Risk Register"
+  status: "approved"
+  content: "1. Data migration complexity (High), 2. AI model hallucination (Medium), 3. Stakeholder resistance (Low)."

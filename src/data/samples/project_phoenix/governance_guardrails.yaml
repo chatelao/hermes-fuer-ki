@@ -1,0 +1,5 @@
+deliverable:
+  framework_id: "del_governance_guardrails"
+  name: "Project Phoenix Governance Guardrails"
+  status: "approved"
+  content: "Decisions requiring >$10k investment must be approved by Handler of the Start. Priority conflicts resolved by Handler of Conflicts using value-based scoring."
