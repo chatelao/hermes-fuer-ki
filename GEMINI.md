@@ -17,6 +17,8 @@
   - Chapter Planned: Human added tasks, don't modify their content only execute them if next/ready and move if done.
   - Chapter Proposed: Before sending the PR add here things you would like to add and/or improve.
   - Chapter Finished: Before sending the PR move and insert finished task at first place into the chapter.
+  - Add 0-5 substeps depending on the step complexity and/or usefullness of intermediate results.
+  -   All substep have checkboxes too.
 
 ## Planning
 - If necessary split steps into 2-5 additional substeps if the complexity of the task is high.
