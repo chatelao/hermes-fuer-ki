@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Manifest Schema",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "framework_ref": { "type": "string" },
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "framework_id": { "type": "string", "pattern": "^del_" },
+              "file": { "type": "string" }
+            },
+            "required": ["framework_id", "file"]
+          }
+        }
+      },
+      "required": ["name", "version", "framework_ref", "deliverables"]
+    }
+  },
+  "required": ["project"]
+}
