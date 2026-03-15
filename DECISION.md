@@ -1,5 +1,14 @@
 # DECISION Log
 
+## 2026-03-17 10:00 - Detailed Role Descriptions & Interaction Guides Strategy
+- **Problem**: Expand the framework to provide detailed role descriptions and interaction guides as per the roadmap.
+- **Solution 1 (Chosen): Structured YAML Data with Individual Documentation Pages**
+  - Reasoning: By expanding the JSON schema and YAML data, we maintain a machine-readable source of truth while enabling the automated generation of detailed, human-friendly role pages. This approach ensures consistency between the data model and documentation.
+- **Solution 2: Monolithic Documentation File**
+  - Reasoning: Easier to generate and read in one go, but less scalable as roles become more complex and harder to link to specifically from other parts of the framework.
+- **Solution 3: Interactive CLI-only Documentation**
+  - Reasoning: Innovative, but fails to provide the persistent, searchable Markdown documentation required for broad accessibility and integration with standard tools.
+
 ## 2026-03-16 15:00 - Mermaid Image Generation Strategy
 - **Problem**: Implement automated generation of Mermaid diagrams to PNG/SVG in CI/CD.
 - **Solution 1 (Chosen): Integrated Python Scripting with Mermaid CLI**

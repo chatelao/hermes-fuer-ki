@@ -7,6 +7,18 @@ framework:
       description: "Focuses on the 'Why' and 'Whether' of the project."
       accountability: "Initializing the project, defining the vision, securing funding, and setting the 'Definition of Success'."
       human_interaction: "Decisions on authorization to invest and project closure."
+      responsibilities:
+        - "Initializing the project and defining core vision"
+        - "Securing funding and resources"
+        - "Setting strategic success metrics"
+        - "Authorizing investment at key decision points"
+        - "Final authorization of project closure"
+      interactions:
+        - role_id: "role_handler_conflicts"
+          description: "Aligns on strategic priorities and resource allocation."
+        - role_id: "role_ai_orchestrator"
+          description: "Receives real-time status feeds and benefit realization evidence."
+      interaction_guide: "The Handler of the Start focuses on strategic value. They should be consulted for all major investment decisions and when the fundamental project vision is questioned."
       mapping:
         Scrum: "Product Owner"
         PRINCE2: "Executive"
@@ -18,6 +30,18 @@ framework:
       description: "Focuses on priority clashes and stakeholder alignment."
       accountability: "Resolving priority clashes, resource competition, and stakeholder misalignments."
       human_interaction: "High-level mediation and value-based prioritization."
+      responsibilities:
+        - "Resolving priority clashes between stakeholders"
+        - "Managing resource competition across workstreams"
+        - "Resolving stakeholder misalignments"
+        - "Prioritizing the strategic backlog"
+        - "Defining and maintaining governance guardrails"
+      interactions:
+        - role_id: "role_handler_start"
+          description: "Aligns on project goals and high-level priorities."
+        - role_id: "role_delivery_specialist"
+          description: "Mediates during resource or priority conflicts within the delivery team."
+      interaction_guide: "The Handler of Conflicts provides high-level mediation. They act when there is a lack of clarity on priorities or when competing interests threaten project progress."
       mapping:
         Scrum: "Product Owner / Scrum Master"
         PRINCE2: "Project Board"
@@ -29,6 +53,18 @@ framework:
       description: "Focuses on managing deviations and risks."
       accountability: "Handling deviations from the plan, risk materialization, and 'Out of Tolerance' events."
       human_interaction: "Intervention when AI-guided automation hits a boundary."
+      responsibilities:
+        - "Handling deviations from the operational plan"
+        - "Managing risk materialization and mitigation"
+        - "Resolving 'Out of Tolerance' events flagged by AI"
+        - "Developing and approving exception plans"
+        - "Guiding tactical course corrections"
+      interactions:
+        - role_id: "role_ai_orchestrator"
+          description: "Monitors for tolerance breaches and flags exceptions for human intervention."
+        - role_id: "role_delivery_specialist"
+          description: "Guides technical adjustments during exception handling and risk mitigation."
+      interaction_guide: "The Handler of Exceptions intervenes when AI-guided automation hits a boundary. They provide tactical guidance during unforeseen events and authorize deviations from the baseline plan."
       mapping:
         Scrum: "Scrum Master / Developers"
         PRINCE2: "Project Manager (Manage by Exception)"
@@ -40,6 +76,20 @@ framework:
       description: "Handles day-to-day workflow management and observability."
       accountability: "Day-to-day workflow management, progress tracking, deliverable linking, and documentation maintenance."
       human_interaction: "Provides real-time transparency and bottleneck detection to human handlers."
+      responsibilities:
+        - "Managing daily workflow and task orchestration"
+        - "Tracking progress and resource utilization"
+        - "Maintaining deliverable linking and traceability"
+        - "Automating status reporting and documentation"
+        - "Identifying and flagging bottlenecks proactively"
+      interactions:
+        - role_id: "role_handler_start"
+          description: "Provides strategic overview, health feeds, and closure evidence."
+        - role_id: "role_handler_exceptions"
+          description: "Alerts on tolerance deviations and provides data for exception planning."
+        - role_id: "role_delivery_specialist"
+          description: "Coordinates daily tasks, ensures standard compliance, and maintains the traceability ledger."
+      interaction_guide: "The AI Orchestrator ensures machine-led operational efficiency. It acts as the primary source of truth for project status and provides the data required for human decision-making."
       mapping:
         Scrum: "Tooling / Scrum Master"
         PRINCE2: "Project Support"
@@ -51,6 +101,18 @@ framework:
       description: "Focuses on creation of deliverables and implementation."
       accountability: "Creation of deliverables, quality assurance, and technical implementation."
       human_interaction: "Expert execution guided by AI-defined standards."
+      responsibilities:
+        - "Creating technical and project deliverables"
+        - "Implementing system components according to specifications"
+        - "Ensuring quality and 'Definition of Done' compliance"
+        - "Generating evidence for quality and compliance"
+        - "Defining and maintaining system architecture"
+      interactions:
+        - role_id: "role_ai_orchestrator"
+          description: "Reports daily progress, links artifacts to the traceability ledger, and follows automated standards."
+        - role_id: "role_handler_exceptions"
+          description: "Receives guidance on technical exceptions and contributes to risk mitigation strategies."
+      interaction_guide: "The Delivery Specialist focuses on expert execution. They work within the framework established by the AI Orchestrator and collaborate with Handlers to ensure high-quality, compliant output."
       mapping:
         Scrum: "Developers"
         PRINCE2: "Team Member"
