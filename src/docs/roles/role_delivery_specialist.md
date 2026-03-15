@@ -31,3 +31,4 @@ The Delivery Specialist focuses on expert execution. They work within the framew
 - **Hermes**: Ersteller
 - **RUP**: Implementer / Architect
 - **V-Modell-XT**: Projektteamrollen
+

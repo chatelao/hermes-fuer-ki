@@ -31,3 +31,4 @@ The Handler of Conflicts provides high-level mediation. They act when there is a
 - **Hermes**: Anwendervertreter
 - **RUP**: CCB / Project Manager
 - **V-Modell-XT**: Lenkungsausschuss
+

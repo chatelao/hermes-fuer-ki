@@ -32,3 +32,4 @@ The AI Orchestrator ensures machine-led operational efficiency. It acts as the p
 - **Hermes**: Projektunterstützung
 - **RUP**: Project Manager (Admin)
 - **V-Modell-XT**: Projektleiter (Admin)
+
